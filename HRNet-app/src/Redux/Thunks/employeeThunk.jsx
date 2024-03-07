@@ -1,32 +1,14 @@
-import {  fetchEmployeesSuccess, fetchEmployeesFailure, addEmployee } from '../Slices/employeeSlice';
-
-
-
-// Function to fetch employees from local storage
-const fetchEmployeesFromLocalStorage = () => {
-  try {
-    const employees = JSON.parse(localStorage.getItem('employees')) || [];
-    return employees;
-  } catch (error) {
-    console.error('Error fetching employees from local storage:', error);
-    return [];
-  }
-};
+import {  fetchEmployeesSuccess, addEmployee } from '../Slices/employeeSlice';
+import { generateMockEmployees } from '../../Data/MockEmployees'; // Import the mock data generation function
 
 // Function to initialize the application
 export const initializeApp = (dispatch) => {
-  // Fetch employees from local storage
-  const employees = fetchEmployeesFromLocalStorage();
+  // Generate mock employees (replace 10 with the desired number of employees)
+  const mockEmployees = generateMockEmployees(10);
   
-  // Update the Redux store with the fetched employees
-  if (employees) {
-    dispatch(fetchEmployeesSuccess(employees));
-  } else {
-    dispatch(fetchEmployeesFailure('Failed to fetch employees'));
-  }
+  // Update the Redux store with the generated mock employees
+  dispatch(fetchEmployeesSuccess(mockEmployees));
 };
-
-export default initializeApp;
 
 
 export const saveEmployee = (employee) => (dispatch) => {

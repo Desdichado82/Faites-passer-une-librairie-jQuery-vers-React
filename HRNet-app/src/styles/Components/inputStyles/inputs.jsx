@@ -55,6 +55,12 @@ export const HRNetForm = styled.form`
   border-radius: 8px;
 `;
 
+export const ErrorMessage = styled.p`
+  color: red;
+  font-size: 14px;
+  margin-top: 5px;
+`;
+
 export const Select = styled.select`
 width: 100%;
 padding: 10px;

@@ -2,22 +2,25 @@ import styled from 'styled-components';
 import { colors } from '../../Theme/colors';
 
 export const HeaderContainer = styled.header`
-  background-color: ${colors.headerBg};
+  background-color: ${colors.primaryBg};
   padding: 20px;
   text-align: center;
+  display:flex;
+  justify-content:center;
+  align-items:center;
 `;
 
 export const Logo = styled.img`
-  max-width: 100%;
+  width:300px;
   height: auto;
 
   @media (min-width: 768px) {
     /* Tablet devices */
-    max-width: 80%;
+    max-width: 200px;
   }
 
   @media (min-width: 992px) {
     /* Desktop devices */
-    max-width: 60%;
+    max-width: 200px;
   }
 `;

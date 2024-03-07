@@ -1,6 +1,7 @@
-import styled from 'styled-components';
+import React from 'react';
+import styled from 'styled-components'; // Import styled-components
 
-// Styled components for modal elements
+
 const ModalOverlay = styled.div`
   position: fixed;
   top: 0;
@@ -14,38 +15,38 @@ const ModalOverlay = styled.div`
 `;
 
 const ModalContent = styled.div`
-  background-color: white; /* White background for modal */
+  background-color: #ffff; /* Use theme color for modal background */
   padding: 20px;
   border-radius: 8px; /* Rounded corners */
+  max-width: 90%; /* Limit modal width */
 `;
 
 const ModalMessage = styled.p`
   font-size: 16px; /* Message font size */
+  color: #989898; /* Use theme color for text */
 `;
 
 const CloseButton = styled.button`
-  background-color: transparent; /* Transparent background */
+  background-color: #74E39A; /* Use theme color for button background */
+  color: #fff; /* Use theme color for button text */
   border: none; /* No border */
   cursor: pointer; /* Pointer cursor */
+  padding: 8px 16px; /* Adjust padding */
+  border-radius: 4px; /* Rounded corners */
+  
 `;
 
-// Modal component definition
 const Modal = ({ isOpen, onClose, message }) => {
-  // If modal is not open, return null to render nothing
   if (!isOpen) return null;
 
   return (
-    // Modal overlay to cover the entire viewport and handle click events to close the modal
     <ModalOverlay onClick={onClose}>
-      {/* Modal content container */}
-      <ModalContent onClick={(e) => e.stopPropagation()}> {/* Prevent closing the modal when clicking inside the modal content */}
-        {/* Display the message passed as prop */}
+      <ModalContent onClick={(e) => e.stopPropagation()}>
         <ModalMessage>{message}</ModalMessage>
-        {/* Close button to close the modal */}
         <CloseButton onClick={onClose}>Close</CloseButton>
       </ModalContent>
     </ModalOverlay>
   );
 };
 
-export default Modal; // Export the Modal component
+export default Modal;

@@ -1,5 +1,5 @@
 import {HeaderContainer, Logo} from '../../../styles/Components/Header/HeaderStyles'
-import HRnet_Logo from '../../../assets/img/HRnet_Logo.png'
+import HRnet_Logo from '../../../assets/img/wealthHealth_logo.webp'
 
 const Header = () => {
     return (

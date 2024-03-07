@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { useSelector } from 'react-redux';
 
-export const DataTable = () => {
+export const DataTableTest = () => {
   // Accessing employee data from Redux store using useSelector hook
   const employees = useSelector((state) => state.employee.employees);
 
@@ -22,8 +22,13 @@ export const DataTable = () => {
           <tr>
             <th>First Name</th>
             <th>Last Name</th>
-            <th>Date of Birth</th>
             <th>Start Date</th>
+            <th>Department</th>
+            <th>Date of Birth</th>
+            <th>Street</th>
+            <th>City</th>
+            <th>State</th>
+            <th>Zip Code </th>
             {/* Add more table headers as needed */}
           </tr>
         </thead>
@@ -33,8 +38,13 @@ export const DataTable = () => {
             <tr key={employee.id}>
               <td>{employee.firstName}</td>
               <td>{employee.lastName}</td>
-              <td>{employee.dateOfBirth}</td>
               <td>{employee.startDate}</td>
+              <td>{employee.department}</td>
+              <td>{employee.dateOfBirth}</td>
+              <td>{employee.street}</td>
+              <td>{employee.city}</td>
+              <td>{employee.state}</td>
+              <td>{employee.zipCode}</td>
               {/* Render more employee data fields as needed */}
             </tr>
           ))}
@@ -44,5 +54,5 @@ export const DataTable = () => {
   );
 };
 
-export default DataTable;
+export default DataTableTest;
 

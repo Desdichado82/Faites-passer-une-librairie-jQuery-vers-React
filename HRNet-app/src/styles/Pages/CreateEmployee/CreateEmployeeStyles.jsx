@@ -15,7 +15,7 @@ export const BannerContainer = styled.div`
   position: relative;
   width: 100%;
   height: 300px; /* Set the height as needed */
-  background-image: url('./src/assets/img/HRNet_Employee.jpg');
+  background-image: url('./src/assets/img/HRNet_Employee.webp');
   background-position: center;
   background-size: cover;
   background-position: center;
@@ -48,6 +48,14 @@ export const CtaLink = styled.a`
 export const Title = styled.h2`
   color: ${colors.headerText};
   background-color: ${colors.headerBg};
+  padding: 10px;
+  border-radius: 8px 8px 0 0;
+  margin: 0;
+`;
+
+export const HOne = styled.h1`
+  color: #3BD16F;
+  text-align :center;
   padding: 10px;
   border-radius: 8px 8px 0 0;
   margin: 0;

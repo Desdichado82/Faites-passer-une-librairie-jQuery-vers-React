@@ -3,7 +3,7 @@ import { saveEmployee } from '../../Redux/Thunks/employeeThunk';
 import { useDispatch } from 'react-redux';
 import { SelectComponent } from '../common/Select/selectComponent';
 import { optionsState, optionsDepartment } from '../../Data/selectData';
-import { HRNetForm, InputGroup, Label, Input, ErrorMessage } from '../../styles/Components/inputStyles/inputs';
+import { HRNetForm, InputGroup, Label, Input, ErrorMessage, SaveButton } from '../../styles/Components/inputStyles/inputs';
 import { Title } from '../../styles/Pages/CreateEmployee/CreateEmployeeStyles';
 import { validateForm } from '../../utils/validation';
 
@@ -138,7 +138,7 @@ const CreateEmployeeForm = ({ onEmployeeCreate }) => {
         />
         {errors.department && <ErrorMessage>{errors.department}</ErrorMessage>}
       </InputGroup>
-      <input type="submit" value="Save"  />
+      <SaveButton type="submit" value="Save"  />
     </HRNetForm>
   );
 };

@@ -11,16 +11,16 @@ export const HeaderContainer = styled.header`
 `;
 
 export const Logo = styled.img`
-  width:300px;
+  width:200px;
   height: auto;
 
   @media (min-width: 768px) {
     /* Tablet devices */
-    max-width: 200px;
+    max-width: 150px;
   }
 
   @media (min-width: 992px) {
     /* Desktop devices */
-    max-width: 200px;
+    max-width:150px;
   }
 `;

@@ -33,8 +33,8 @@ export const Button = styled.button`
 `;
 
 export const SaveButton = styled.input`
-  background-color: ${props => props.theme.buttonBg};
-  color: ${props => props.theme.buttonText};
+background-color: ${colors.buttonBg};
+  color: ${colors.buttonText};
   border: none;
   padding: 10px 20px;
   border-radius: 4px;

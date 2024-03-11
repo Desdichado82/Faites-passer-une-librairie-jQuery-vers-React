@@ -76,7 +76,7 @@ const CreateEmployeeForm = ({ onEmployeeCreate }) => {
 
 
   return (
-    <HRNetForm onSubmit={handleSubmit}>
+    <HRNetForm onSubmit={handleSubmit} id="wealthHealthForm">
       <Title>Create Employee</Title>
       <InputGroup>
         <Label htmlFor="first-name">First Name</Label>
